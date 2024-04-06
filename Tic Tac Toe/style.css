@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=DM+Serif+Display:ital@1&family=Roboto&family=Rubik+Dirt&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: gray;
+    color: white;
+    height: 12vh;
+    font-size: 4vh;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul{
+    list-style: none;
+    padding-left: 50px;
+}
+
+.gameContainer{
+    /* background-color: rgb(255, 255, 167) ; */
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.container{
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Courgette', cursive;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 6.5vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info{
+    font-size: 20px;
+}
+
+.gameInfo{
+    padding: 0px 50px;
+    font-family: cursive;
+}
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+.line{
+    background-color: rgb(63, 30, 82);
+    height: 3px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+.box:hover{
+    background-color: wheat;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br{
+    border-right: 0;
+}
+
+.bl{
+    border-left: 0;
+}
+
+.bt{
+    border-top: 0;
+}
+
+.bb{
+    border-bottom: 0;
+}
+
+#reset{
+    margin: 5px 25px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgb(230, 227, 255);
+    font-family: 'Rubik Dirt', cursive;
+    font-size: 20px;
+}
+
+@media  screen and (max-width: 950px) {
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+}

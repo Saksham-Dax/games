@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;  
+}
+
+.body{
+    display: flex;
+    min-height: 100vh;
+    background: url("../bg2.webp");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+#scoreBox{
+    position: absolute;
+    top: 80px;
+    right: 274px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'VT323', monospace;
+}
+
+#hiscoreBox{
+    position: absolute;
+    top: 22px;
+    right: 90px;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'VT323', monospace;
+}
+
+#board{
+    background: linear-gradient(rgb(87, 255, 87),rgb(113, 113, 0));
+    width: 90vmin;
+    height: 90vmin;
+    border: 3px solid black;
+    border-radius: 7px;
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+    opacity:0.9;
+}
+
+.head{
+    background-color: rgb(244, 196, 48);
+    border: 1px solid blue;
+    border-radius: 12px;
+    transform: scale(1.02);
+}
+.snake{
+    background: linear-gradient(green,blue);
+    border: .25vmin solid white;
+    border-radius: 10px;
+}
+
+.food{
+    background-color: green;
+    border: .25vmin solid black;
+    border-radius: 20px;
+
+}
